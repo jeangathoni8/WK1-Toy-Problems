@@ -1,4 +1,31 @@
-/* Style the input field*/
+/*Style the body*/
+body {
+    font-family: Arial, sans-serif;
+}
+/*Style the container*/
+.grade.container {
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+/* Style the input, button field*/
+input, button{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
 /* Style the button*/
-/* Style the input field*/
-/* Style the input field*/
+button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+}
+/* Style the gradeOutput*/
+#gradeOutput {
+    margin-top: 20px;
+}

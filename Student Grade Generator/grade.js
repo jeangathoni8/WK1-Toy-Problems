@@ -20,6 +20,14 @@ if (marks > 79) {
 } else if (marks < 40) {
     grade = 'E';
 }
-//Display the grade on the page.
-document.getElementById('gradeOutput').innerHTML = `Grade: ${grade}`;
-}
+
+//Resets the content of the 'gradeOutput' element when the reset button is clicked.
+function resetGrade() {
+    const gradeOutput = document.getElementById('gradeOutput');
+    if gradeOutput.innerHTML = '';
+    if (gradeOutput.innerHTML !== '' ) {
+        gradeOutput.textContent = 'Submit';
+        }
+    }
+
+

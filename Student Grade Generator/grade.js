@@ -1,11 +1,12 @@
 //Capture the input from the user.
 function calculateGrade() {
-    const marks = document.getElementById("marksInput").value;
-    let grade;
+    const marksInput = document.getElementById("marksInput").value;
+    const marks = marksInput.value;
     //Validate the input to ensure it's between 0 and 100.
-    if (marks < 0 || marks > 100) {
-        alert('Marks must be between 0 and 100.');
-        return;
+    if (isNaN(marks) || marks < 0 || marks > 100) {
+        alert('Please enter a number between  0 and 100');
+        marksInput.focus();
+        return false;
 }
 }
 //Determine the grade based on the input marks.
@@ -21,12 +22,15 @@ if (marks > 79) {
     grade = 'E';
 }
 
+//Display grade to the user
+alert ('Your Grade is: ' + grade);
+
 //Resets the content of the 'gradeOutput' element when the reset button is clicked.
 function resetGrade() {
     const gradeOutput = document.getElementById('gradeOutput');
     if gradeOutput.innerHTML = '';
     if (gradeOutput.innerHTML !== '' ) {
-        gradeOutput.textContent = 'Submit';
+        gradeOutput.innerHTML = 'Submit';
         }
     }
 

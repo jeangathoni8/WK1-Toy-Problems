@@ -9,11 +9,16 @@
 <body>
     <div class="container">
     <!--Input field for the car speed.-->
-    <input type="number" id="speedInput" placeholder="Enter speed in km/h" min="0">
+    <form id="speedForm">
+      <label for="speedInput">Enter Speed:</label><br>
+      <input type="number" id="speedInput" placeholder="Enter speed in km/h" min="0">
+      <br>
+      <input type="submit" value="Calculate">
+    </form>
+     <!--Area to display the result (“Ok”, “Points: X”, or “License suspended”).-->
+    <div class="result" id="result"></div>
     <!--Button to submit the speed.-->
     <button onclick="calculateDemeritPoints()">Check Speed</button>
-    <!--Area to display the result (“Ok”, “Points: X”, or “License suspended”).-->
-    <div class="result" id="result"></div>
   </div>
   <script src="speed.js"></script>
 </body>

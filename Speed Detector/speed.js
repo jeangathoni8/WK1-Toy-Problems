@@ -1,14 +1,14 @@
-// Here is an improved version of the 'calculateDemeritPoints' function:
-
-/**
- * Calculates the demerit points for a given speed.
- * @returns {void}
- */
+//Add button click event for calculating demerit points
 function calculateDemeritPoints() {
-  const speedInput = document.getElementById('speedInput');
   const result = document.getElementById('result');
 
-  const speed = Number(speedInput.value);
+  const speed = parseInt(document.getElementById('speedInput').value);
+//To Evaluate the speed
+  if (!speed) {
+    result.textContent = 'Enter speed in km/h';
+    return;
+  }
+//Calculating the speed for demerit points
   const points = Math.floor((speed - 70) / 5);
 
   if (speed <= 70) {
@@ -19,3 +19,9 @@ function calculateDemeritPoints() {
     result.textContent = `Points: ${points}`;
   }
 }
+
+// Immediate  execution function to add an event listener
+document.getElementById('speedForm').addEventListener('submit', (event) => {
+  event.preventDefault();
+  calculateDemeritPoints();
+});

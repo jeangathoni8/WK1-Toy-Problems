@@ -41,7 +41,7 @@ function calculateNHIF(grossSalary) {
     return 1700; // Default for 100,000 and above
 }
 
-function calculateNSSF(grossSalary) {
+function calculateNSSF(grossSalary, nssfRate) {
     // Simplified, adjust based on actual NSSF calculation
-    return 200; // Example fixed amount
+    return grossSalary * nssfRate; // Example fixed amount
 }
